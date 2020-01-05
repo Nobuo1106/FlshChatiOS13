@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="187" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Flash_Chat_iOS13" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ivA-Eq-3F6">
+                        <rect key="frame" x="10" y="10" width="304" height="167"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-ty-Pgr">
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello hellohellohellohellohellohellohellohellohellohellohellohello" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-Yg-ufW">
+                                        <rect key="frame" x="10" y="10" width="224" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yc7-Yg-ufW" secondAttribute="trailing" constant="10" id="Mgh-os-GYp"/>
+                                    <constraint firstItem="yc7-Yg-ufW" firstAttribute="leading" secondItem="Lxv-ty-Pgr" secondAttribute="leading" constant="10" id="ZnY-VW-xyz"/>
+                                    <constraint firstItem="yc7-Yg-ufW" firstAttribute="top" secondItem="Lxv-ty-Pgr" secondAttribute="top" constant="10" id="laK-qh-itb"/>
+                                    <constraint firstAttribute="bottom" secondItem="yc7-Yg-ufW" secondAttribute="bottom" constant="10" id="ppb-hk-SRi"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="nHh-5M-7rx">
+                                <rect key="frame" x="264" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oKo-cG-fAr"/>
+                                    <constraint firstAttribute="width" constant="40" id="teK-f7-tyI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ivA-Eq-3F6" secondAttribute="trailing" constant="10" id="IsM-H4-vOD"/>
+                    <constraint firstItem="ivA-Eq-3F6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MA5-7e-Umh"/>
+                    <constraint firstItem="ivA-Eq-3F6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="l5f-9M-uIk"/>
+                    <constraint firstAttribute="bottom" secondItem="ivA-Eq-3F6" secondAttribute="bottom" constant="10" id="tXC-xw-iaq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="yc7-Yg-ufW" id="dCQ-G9-Wk1"/>
+                <outlet property="messageBubble" destination="Lxv-ty-Pgr" id="kwi-pc-Jj5"/>
+                <outlet property="rightImageView" destination="nHh-5M-7rx" id="ev6-hs-M2o"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="183.14732142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+    </resources>
+</document>
