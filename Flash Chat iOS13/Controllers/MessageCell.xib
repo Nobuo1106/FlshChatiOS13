@@ -19,11 +19,18 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ivA-Eq-3F6">
                         <rect key="frame" x="10" y="10" width="304" height="167"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="gAL-K8-yoR">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="IeF-ut-KUK"/>
+                                    <constraint firstAttribute="height" constant="40" id="vr9-7Y-WQ3"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-ty-Pgr">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="81"/>
+                                <rect key="frame" x="60" y="0.0" width="184" height="101.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello hellohellohellohellohellohellohellohellohellohellohellohello" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-Yg-ufW">
-                                        <rect key="frame" x="10" y="10" width="224" height="61"/>
+                                        <rect key="frame" x="10" y="10" width="164" height="81.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <nil key="highlightedColor"/>
@@ -57,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="yc7-Yg-ufW" id="dCQ-G9-Wk1"/>
+                <outlet property="leftImageView" destination="gAL-K8-yoR" id="6i5-qm-xrW"/>
                 <outlet property="messageBubble" destination="Lxv-ty-Pgr" id="kwi-pc-Jj5"/>
                 <outlet property="rightImageView" destination="nHh-5M-7rx" id="ev6-hs-M2o"/>
             </connections>
@@ -65,5 +73,6 @@
     </objects>
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
+        <image name="YouAvatar" width="36" height="36"/>
     </resources>
 </document>
