@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    // firestoreのインスタンス
     let db = Firestore.firestore()
     
     var messages: [Message] = [
@@ -31,10 +32,12 @@ class ChatViewController: UIViewController {
         loadMessages()
     }
     
+//    メッセージを読み込んで表示
     func loadMessages() {
         messages = []
         
-        db.collection(K.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+        //　addSnapshotListenerがリアルタイムで追加されたデータを感知して以下の処理を走らせる
+        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { (querySnapshot, error) in
             self.messages = []
             
             if let e = error {
@@ -57,11 +60,15 @@ class ChatViewController: UIViewController {
         }
     }
     
+//    メッセージの追加
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
+                //メッセージ送信者
                 K.FStore.senderField: messageSender,
+                //メッセージ内容
                 K.FStore.bodyField: messageBody,
+                //時間
                 K.FStore.dateField: Date().timeIntervalSince1970
             ])
             { (error) in
